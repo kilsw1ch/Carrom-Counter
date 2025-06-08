@@ -12,6 +12,7 @@ body{
 } */
 
 .p1{
+
     position:absolute;
     width: 50%;
     height: 50%;
@@ -20,6 +21,7 @@ body{
 }
 
 .p2{
+
     position:absolute;
     left:50%;
     width: 50%;
@@ -29,6 +31,7 @@ body{
 }
 
 .p3{
+
     position:absolute;
     top:50%;
     width: 50%;
@@ -38,6 +41,7 @@ body{
 }
 
 .p4{
+
     position:absolute;
     top:50%;
     left:50%;
@@ -48,7 +52,6 @@ body{
 }
 
 p{
-
     margin-top:10%;
 }
 
@@ -61,7 +64,7 @@ input{
 .p1 span, .p2 span, .p3 span, .p4 span{
 
     display: inline-block;
-    margin-top:50%;
+    margin-top:40%;
 }
 
 button{
