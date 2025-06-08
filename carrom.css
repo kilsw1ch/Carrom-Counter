@@ -1,0 +1,116 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-size: 4rem;
+}
+
+/* .material-icons{
+    font-size: 50px;
+} */
+
+.p1{
+    position:absolute;
+    width: 50%;
+    height: 50%;
+    background-color: #FDFD96;
+    text-align: center;
+}
+
+.p2{
+    position:absolute;
+    left:50%;
+    width: 50%;
+    height: 50%;
+    background-color: #FFB3BA;
+    text-align: center;
+}
+
+.p3{
+    position:absolute;
+    top:50%;
+    width: 50%;
+    height: 50%;
+    background-color: #B8E2B8;
+    text-align: center;
+}
+
+.p4{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width: 50%;
+    height: 50%;
+    background-color: #A7C6ED;
+    text-align: center;
+}
+
+p{
+
+    margin-top:10%;
+}
+
+input{
+
+    /* margin-top:10%; */
+
+}
+
+.p1 span, .p2 span, .p3 span, .p4 span{
+
+    display: inline-block;
+    margin-top:50%;
+}
+
+button{
+
+    position: absolute;
+    left:35%;
+    top:60%;
+    
+    border: none;
+    border-radius: 50%;
+
+    height: 150px;
+    width:150px;
+
+    background-color: #000;
+
+    font-size: 5rem;
+    color: #fff;
+    text-align: center;
+
+    padding: 10px;
+}
+
+.totaldiv{
+
+    position: absolute;
+    left: 44%;
+    top: 47%;
+
+    width: 120px;
+    height: 120px;
+
+    border-radius: 50%;
+    background-color: #fff;
+
+    color: #000;
+    text-align: center;
+    line-height: 2;
+}
+
+.resetbtn{
+
+    background-color: #000;
+    color: #fff;
+
+    left: 42%;
+    top: 90%;
+
+    span{
+        font-size: 4rem;
+    }
+}
