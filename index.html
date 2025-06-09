@@ -5,42 +5,53 @@
     <title>carrom</title>
     <link rel="stylesheet" href="carrom.css">
 
-    <link rel="icon" href="media/icon.png">
+    <!-- <link rel="icon" href="media/icon.png"> -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
 <body>
     
-    <div class="p1" id="p1">
+    <div class="player1" id="player1">
+        
         <p>baba</p>
         <!-- <input type="text" placeholder="Player 1"> -->
         <span id="p1score">0</span>
-        <button id="p1dec">-</button>
+        <button class="decbtn" id="p1dec">-</button>
+        <button class="ranibtn" id="p1rani">rani</button>
     </div>
 
-    <div class="p2" id="p2">
+    <div class="player2" id="player2">
         <p>dada</p>
         <span id="p2score">0</span>
-        <button id="p2dec">-</button>
+        <button class="decbtn" id="p2dec">-</button>
+        <button class="ranibtn" id="p2rani">rani</button>
     </div>
 
-    <div class="p3" id="p3">
+    <div class="player3" id="player3">
         <p>rohan</p>
         <span id="p3score">0</span>
-        <button id="p3dec">-</button>
+        <button class="decbtn" id="p3dec">-</button>
+        <button class="ranibtn" id="p3rani">rani</button>
     </div>
 
-    <div class="p4" id="p4">
+    <div class="player4" id="player4">
         <p>ma</p>
         <span id="p4score">0</span>
-        <button id="p4dec">-</button>
+        <button class="decbtn" id="p4dec">-</button>
+        <button class="ranibtn" id="p4rani">rani</button>
     </div>
 
     <div class="totaldiv">
         <span id="displayedtotal">19</span>
     </div>
 
-    <button class="resetbtn" id="resetbtn"><span class="material-icons">replay</span></button>
+    <div class="bottombar">
+
+        <span class="resetbtn" id="resetbtn"><span class="material-icons">replay</span></span>
+
+        <span class="newbtn" id="newbtn"><span class="material-icons">add</span></span>
+    </div>
+
 </body>
 
 <script src="carrom.js"></script>
