@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -47,9 +48,18 @@
 
     <div class="bottombar">
 
+        <span class="statsbtn" id="statsbtn"><span class="material-icons">bar_chart</span></span>
+
         <span class="resetbtn" id="resetbtn"><span class="material-icons">replay</span></span>
 
         <span class="newbtn" id="newbtn"><span class="material-icons">add</span></span>
+    </div>
+
+    <div class="confirmwindow" id="confirmwindow">
+
+        <p style="padding-top: 5%;">Start a new game?</p>
+        <button id="nobtn" style="position: absolute; top: 60%; left: 16%;">Cancel</button>
+        <button id="yesbtn" style="position: absolute; top: 60%; right: 16%;">Yes</button>
     </div>
 
 </body>

@@ -33,8 +33,14 @@ const p4rani = document.getElementById('p4rani')
 const total=document.getElementById('displayedtotal');
 let totalscore = 19;
 
-//reset
+//bottombar
 const reset=document.getElementById('resetbtn');
+
+const newbtn=document.getElementById('newbtn');
+const confirmwindow=document.getElementById('confirmwindow');
+const nobtn=document.getElementById('nobtn');
+const yesbtn=document.getElementById('yesbtn');
+
 
 {//inc logic
 p1.addEventListener('click', function() {
@@ -179,86 +185,102 @@ p4dec.addEventListener('click', function(event){
 {//rani logic
 p1rani.addEventListener('click', function(event){
 
-    event.stopPropagation();
+    if(p1score<9){
 
-    this.disabled=true;
-    p2rani.disabled=true;
-    p3rani.disabled=true;
-    p4rani.disabled=true;
+        event.stopPropagation();
 
-    this.style.setProperty("background-color", "#999");
-    p2rani.style.setProperty("background-color", "#999");
-    p3rani.style.setProperty("background-color", "#999");
-    p4rani.style.setProperty("background-color", "#999");
+        this.disabled=true;
+        p2rani.disabled=true;
+        p3rani.disabled=true;
+        p4rani.disabled=true;
 
-    p1score++;
-    p1scoreDisplay.textContent=p1score;
+        p2rani.style.setProperty("background-color", "#999");
+        p3rani.style.setProperty("background-color", "#999");
+        p4rani.style.setProperty("background-color", "#999");
 
-    totalscore--;
-    total.innerText=totalscore;
+        p1score=p1score+2;
+        p1scoreDisplay.textContent=p1score;
+
+        totalscore=totalscore-2;
+        total.innerText=totalscore;
+    }
+
+    else event.stopPropagation();
 })
 
 p2rani.addEventListener('click', function(event){
 
-    event.stopPropagation();
+    if(p2score<9){
 
-    this.disabled=true;
-    p1rani.disabled=true;
-    p3rani.disabled=true;
-    p4rani.disabled=true;
+        event.stopPropagation();
 
-    this.style.setProperty("background-color", "#999");
-    p1rani.style.setProperty("background-color", "#999");
-    p3rani.style.setProperty("background-color", "#999");
-    p4rani.style.setProperty("background-color", "#999");
+        this.disabled=true;
+        p1rani.disabled=true;
+        p3rani.disabled=true;
+        p4rani.disabled=true;
 
-    p2score++;
-    p2scoreDisplay.textContent=p2score;
+        p1rani.style.setProperty("background-color", "#999");
+        p3rani.style.setProperty("background-color", "#999");
+        p4rani.style.setProperty("background-color", "#999");
 
-    totalscore--;
-    total.innerText=totalscore;
+        p2score=p2score+2;
+        p2scoreDisplay.textContent=p2score;
+
+        totalscore=totalscore-2;
+        total.innerText=totalscore;
+    }
+
+    else event.stopPropagation();
 })
 
 p3rani.addEventListener('click', function(event){
 
-    event.stopPropagation();
+    if(p3score<9){
 
-    this.disabled=true;
-    p1rani.disabled=true;
-    p2rani.disabled=true;
-    p4rani.disabled=true;
+        event.stopPropagation();
 
-    this.style.setProperty("background-color", "#999");
-    p2rani.style.setProperty("background-color", "#999");
-    p1rani.style.setProperty("background-color", "#999");
-    p4rani.style.setProperty("background-color", "#999");
+        this.disabled=true;
+        p1rani.disabled=true;
+        p2rani.disabled=true;
+        p4rani.disabled=true;
 
-    p3score++;
-    p3scoreDisplay.textContent=p3score;
+        p2rani.style.setProperty("background-color", "#999");
+        p1rani.style.setProperty("background-color", "#999");
+        p4rani.style.setProperty("background-color", "#999");
 
-    totalscore--;
-    total.innerText=totalscore;
+        p3score=p3score+2;
+        p3scoreDisplay.textContent=p3score;
+
+        totalscore=totalscore-2;
+        total.innerText=totalscore;
+    }
+
+    else event.stopPropagation();
 })
 
 p4rani.addEventListener('click', function(event){
 
-    event.stopPropagation();
+    if(p4score<9){
 
-    this.disabled=true;
-    p1rani.disabled=true;
-    p2rani.disabled=true;
-    p3rani.disabled=true;
+        event.stopPropagation();
 
-    this.style.setProperty("background-color", "#999");
-    p2rani.style.setProperty("background-color", "#999");
-    p3rani.style.setProperty("background-color", "#999");
-    p1rani.style.setProperty("background-color", "#999");
+        this.disabled=true;
+        p1rani.disabled=true;
+        p2rani.disabled=true;
+        p3rani.disabled=true;
 
-    p4score++;
-    p4scoreDisplay.textContent=p4score;
+        p2rani.style.setProperty("background-color", "#999");
+        p3rani.style.setProperty("background-color", "#999");
+        p1rani.style.setProperty("background-color", "#999");
 
-    totalscore--;
-    total.innerText=totalscore;
+        p4score=p4score+2;
+        p4scoreDisplay.textContent=p4score;
+
+        totalscore=totalscore-2;
+        total.innerText=totalscore;
+    }
+
+    else event.stopPropagation();
 })
 }
 
@@ -289,4 +311,26 @@ reset.addEventListener('click', function(){
 
     total.innerText=totalscore;
 })
+}
+
+{//newbtn logic
+newbtn.addEventListener('click', function(){
+
+    confirmwindow.style.visibility = 'visible';
+})
+}
+
+{//nobtn logic
+nobtn.addEventListener('click', function(){
+
+    confirmwindow.style.visibility = 'hidden';
+})
+}
+
+{//yesbtn logic
+yesbtn.addEventListener('click', function(){
+
+    reset.click();
+    confirmwindow.style.visibility = 'hidden';
+})   
 }

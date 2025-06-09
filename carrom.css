@@ -7,11 +7,14 @@ body{
     font-size: 4rem;
 }
 
-/* .material-icons{
-    font-size: 50px;
-} */
-
 .player1{
+
+    /* input{
+        color: #000;
+        background: transparent;
+        border: none;
+        font-size: 4rem;
+    } */
 
     position:absolute;
     width: 50%;
@@ -51,17 +54,17 @@ body{
     text-align: center;
 }
 
-p{
+/* input{
+
     margin-top:10%;
-}
 
-input{
-
-    /* margin-top:10%; */
-
-}
+} */
 
 .player1, .player2, .player3, .player4{
+
+    p{
+        margin-top:10%;
+    }
 
     span{
         display: inline-block;
@@ -139,7 +142,7 @@ input{
     width: 100%;
     background-color: #999;
 
-    .resetbtn, .newbtn{
+    .resetbtn, .newbtn, .statsbtn{
 
         margin:auto;
 
@@ -150,5 +153,27 @@ input{
         span{
             font-size: 4rem;
         }
+    }
+}
+
+.confirmwindow{
+
+    visibility: hidden;
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    text-align: center;
+    background-color: #000;
+    border-radius: 1%;
+    color: #fff;
+    width: 70%;
+    height: 20%;
+
+    button{
+
+        border: none;
+        font-size: 3rem;
+        padding: 15px 25px;
+        border-radius: 5%;
     }
 }
