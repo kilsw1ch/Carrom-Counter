@@ -9,17 +9,10 @@ body{
 
 .player1{
 
-    /* input{
-        color: #000;
-        background: transparent;
-        border: none;
-        font-size: 4rem;
-    } */
-
     position:absolute;
     width: 50%;
     height: 46%;
-    background-color: #FDFD96;
+    background-color: #fdfd96;
     text-align: center;
 }
 
@@ -53,12 +46,6 @@ body{
     background-color: #A7C6ED;
     text-align: center;
 }
-
-/* input{
-
-    margin-top:10%;
-
-} */
 
 .player1, .player2, .player3, .player4{
 
@@ -106,13 +93,17 @@ body{
 
         background-color: #FF6A4D;
 
-        font-size: 5rem;
+        font-size: 4rem;
         text-align: center;
 
         padding: 10px;
 
-        font-size: 3rem;
         color: #fff;
+
+        span{
+            font-size: 4rem;
+            line-height: 0.5;
+        }
     }
 }
 
@@ -140,7 +131,7 @@ body{
     top: 92%;
     height: 8%;
     width: 100%;
-    background-color: #999;
+    background-color: #333;
 
     .resetbtn, .newbtn, .statsbtn{
 
@@ -148,7 +139,7 @@ body{
 
         background-color: none;
         color: #fff;
-        left: 42%;
+        padding-top: 3%;
 
         span{
             font-size: 4rem;
@@ -156,24 +147,92 @@ body{
     }
 }
 
-.confirmwindow{
+.confirmwindow, .statwindow{
 
     visibility: hidden;
-    position: absolute;
-    top: 40%;
-    left: 15%;
-    text-align: center;
-    background-color: #000;
-    border-radius: 1%;
-    color: #fff;
-    width: 70%;
-    height: 20%;
+    position: fixed; 
+    z-index: 10; 
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
 
-    button{
+    .confirmchild{
 
-        border: none;
-        font-size: 3rem;
-        padding: 15px 25px;
-        border-radius: 5%;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        position: absolute;
+        top: 40%;
+        left: 15%;
+        text-align: center;
+        background-color: #333;
+        border-radius: 1%;
+        color: #fff;
+        width: 70%;
+        height: 20%;
+
+        button{
+
+            border: none;
+            font-size: 3rem;
+            padding: 15px 25px;
+            border-radius: 5%;
+        }
+    }
+
+    .statchild{
+
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        position: absolute;
+        top: 0.5%;
+        left: 1%;
+        text-align: center;
+        background-color: #333;
+        border-radius: 1%;
+        color: #fff;
+        width: 98%;
+        height: 91%;
+
+        button{
+
+            background: none;
+            border: none;
+            position: absolute;
+            top: 2%;
+            right: 4%;
+            color: #fff;
+
+            span{
+                font-size: 3rem;
+            }
+        }
+
+        #stattable{
+
+            position: absolute;
+            top: 10%;
+            left: 5%;
+            width: 90%;
+            border-collapse: collapse;
+            
+            th, td{
+                padding: 15px;
+            }
+        }
+
+        #gametable{
+
+            /* visibility: hidden; */
+            position: relative;
+            top: 55%;
+            left: 5%;
+            width: 90%;
+            border-collapse: collapse;
+            
+            td{
+                padding: 15px;
+                color: #000;
+            }
+        }
     }
 }

@@ -8,6 +8,7 @@
 
     <!-- <link rel="icon" href="media/icon.png"> -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined">
 </head>
 
 <body>
@@ -15,31 +16,30 @@
     <div class="player1" id="player1">
         
         <p>baba</p>
-        <!-- <input type="text" placeholder="Player 1"> -->
         <span id="p1score">0</span>
         <button class="decbtn" id="p1dec">-</button>
-        <button class="ranibtn" id="p1rani">rani</button>
+        <button class="ranibtn" id="p1rani"><span class="material-symbols-outlined">poker_chip</span></button>
     </div>
 
     <div class="player2" id="player2">
         <p>dada</p>
         <span id="p2score">0</span>
         <button class="decbtn" id="p2dec">-</button>
-        <button class="ranibtn" id="p2rani">rani</button>
+        <button class="ranibtn" id="p2rani"><span class="material-symbols-outlined">poker_chip</span></button>
     </div>
 
     <div class="player3" id="player3">
         <p>rohan</p>
         <span id="p3score">0</span>
         <button class="decbtn" id="p3dec">-</button>
-        <button class="ranibtn" id="p3rani">rani</button>
+        <button class="ranibtn" id="p3rani"><span class="material-symbols-outlined">poker_chip</span></button>
     </div>
 
     <div class="player4" id="player4">
         <p>ma</p>
         <span id="p4score">0</span>
         <button class="decbtn" id="p4dec">-</button>
-        <button class="ranibtn" id="p4rani">rani</button>
+        <button class="ranibtn" id="p4rani"><span class="material-symbols-outlined">poker_chip</span></button>
     </div>
 
     <div class="totaldiv">
@@ -55,11 +55,111 @@
         <span class="newbtn" id="newbtn"><span class="material-icons">add</span></span>
     </div>
 
+    <div class="statwindow" id="statwindow">
+
+        <div class="statchild">
+
+            <button id="closebtn"><span class="material-icons">close</span></button>
+
+            <table id="stattable">
+
+                <tr>
+                    <th>Player</th>
+                    <th>Total</th>
+                    <th>Average</th>
+                </tr>
+
+                <tr style="background-color: #fdfd96; color: #000;">
+                    <td>baba</td>
+                    <td id="p1total"></td>
+                    <td id="p1avg"></td>
+                </tr>
+
+                <tr style="background-color: #FFB3BA; color: #000;">
+                    <td>dada</td>
+                    <td id="p2total"></td>
+                    <td id="p2avg"></td>
+                </tr>
+
+                <tr style="background-color: #B8E2B8; color: #000;">
+                    <td>rohan</td>
+                    <td id="p3total"></td>
+                    <td id="p3avg"></td>
+                </tr>
+
+                <tr style="background-color: #A7C6ED; color: #000;">
+                    <td>ma</td>
+                    <td id="p4total"></td>
+                    <td id="p4avg"></td>
+                </tr>
+            </table>
+
+            <p id="gamesplayed" style="position: absolute; top: 45%; left: 5%;">Games played : 0</p>
+
+            <!-- <table id="gametable">
+
+                <tr id="g1stat">
+                    <td style="background-color: #fdfd96"></td>
+                    <td style="background-color: #FFB3BA"></td>
+                    <td style="background-color: #B8E2B8"></td>
+                    <td style="background-color: #A7C6ED"></td>
+                </tr>
+
+                <tr id="g2stat">
+                    <td style="background-color: #fdfd96"></td>
+                    <td style="background-color: #FFB3BA"></td>
+                    <td style="background-color: #B8E2B8"></td>
+                    <td style="background-color: #A7C6ED"></td>
+                </tr>
+
+                <tr id="g3stat">
+                    <td style="background-color: #fdfd96"></td>
+                    <td style="background-color: #FFB3BA"></td>
+                    <td style="background-color: #B8E2B8"></td>
+                    <td style="background-color: #A7C6ED"></td>
+                </tr>
+
+                <tr id="g4stat">
+                    <td style="background-color: #fdfd96"></td>
+                    <td style="background-color: #FFB3BA"></td>
+                    <td style="background-color: #B8E2B8"></td>
+                    <td style="background-color: #A7C6ED"></td>
+                </tr>
+
+                <tr id="g5stat">
+                    <td style="background-color: #fdfd96"></td>
+                    <td style="background-color: #FFB3BA"></td>
+                    <td style="background-color: #B8E2B8"></td>
+                    <td style="background-color: #A7C6ED"></td>
+                </tr>
+
+                <tr id="g6stat">
+                    <td style="background-color: #fdfd96"></td>
+                    <td style="background-color: #FFB3BA"></td>
+                    <td style="background-color: #B8E2B8"></td>
+                    <td style="background-color: #A7C6ED"></td>
+                </tr>
+
+                <tr id="g7stat">
+                    <td style="background-color: #fdfd96"></td>
+                    <td style="background-color: #FFB3BA"></td>
+                    <td style="background-color: #B8E2B8"></td>
+                    <td style="background-color: #A7C6ED"></td>
+                </tr>
+            </table> -->
+        </div>
+    </div>
+
     <div class="confirmwindow" id="confirmwindow">
 
-        <p style="padding-top: 5%;">Start a new game?</p>
-        <button id="nobtn" style="position: absolute; top: 60%; left: 16%;">Cancel</button>
-        <button id="yesbtn" style="position: absolute; top: 60%; right: 16%;">Yes</button>
+        <div class="confirmchild">
+
+            <p style="padding-top: 5%;">Start a new game?</p>
+
+            <button id="nobtn" style="position: absolute; top: 60%; left: 16%;">Cancel</button>
+
+            <button id="yesbtn" style="position: absolute; top: 60%; right: 16%;">Yes</button>
+        </div>
     </div>
 
 </body>

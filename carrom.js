@@ -34,6 +34,39 @@ const total=document.getElementById('displayedtotal');
 let totalscore = 19;
 
 //bottombar
+const statsbtn=document.getElementById('statsbtn');
+const statwindow=document.getElementById('statwindow');
+const closebtn=document.getElementById('closebtn');
+
+const p1total=document.getElementById('p1total');
+const p1avg=document.getElementById('p1avg');
+
+const p2total=document.getElementById('p2total');
+const p2avg=document.getElementById('p2avg');
+
+const p3total=document.getElementById('p3total');
+const p3avg=document.getElementById('p3avg');
+
+const p4total=document.getElementById('p4total');
+const p4avg=document.getElementById('p4avg');
+
+let p1totalscore=0;
+let p2totalscore=0;
+let p3totalscore=0;
+let p4totalscore=0;
+
+let p1avgscore=0;
+let p2avgscore=0;
+let p3avgscore=0;
+let p4avgscore=0;
+
+let gamecounter=0;
+
+const gamesplayed=document.getElementById('gamesplayed');
+
+const gametable=document.getElementById('gametable');
+
+
 const reset=document.getElementById('resetbtn');
 
 const newbtn=document.getElementById('newbtn');
@@ -43,7 +76,7 @@ const yesbtn=document.getElementById('yesbtn');
 
 
 {//inc logic
-p1.addEventListener('click', function() {
+p1.onclick=function() {
 
     if(p1score!=10){
 
@@ -53,9 +86,9 @@ p1.addEventListener('click', function() {
         totalscore--;
         total.innerText=totalscore;
     }
-});
+};
 
-p2.addEventListener('click', function() {
+p2.onclick=function() {
 
     if(p2score!=10){
 
@@ -65,9 +98,9 @@ p2.addEventListener('click', function() {
         totalscore--;
         total.innerText=totalscore;
     }
-});
+};
 
-p3.addEventListener('click', function() {
+p3.onclick=function() {
 
     if(p3score!=10){
 
@@ -77,9 +110,9 @@ p3.addEventListener('click', function() {
         totalscore--;
         total.innerText=totalscore;
     }
-});
+};
 
-p4.addEventListener('click', function() {
+p4.onclick=function() {
 
     if(p4score!=10){
 
@@ -89,11 +122,11 @@ p4.addEventListener('click', function() {
         totalscore--;
         total.innerText=totalscore;
     }
-});
+};
 }
 
 {//dec logic
-p1dec.addEventListener('click', function(event){
+p1dec.onclick=function(event){
 
     if(totalscore==19){
 
@@ -113,9 +146,9 @@ p1dec.addEventListener('click', function(event){
         totalscore++;
         total.innerText=totalscore;
     }
-})
+}
 
-p2dec.addEventListener('click', function(event){
+p2dec.onclick=function(event){
 
     if(totalscore==19){
 
@@ -135,9 +168,9 @@ p2dec.addEventListener('click', function(event){
         totalscore++;
         total.innerText=totalscore;
     }
-})
+}
 
-p3dec.addEventListener('click', function(event){
+p3dec.onclick=function(event){
 
     if(totalscore==19){
 
@@ -157,9 +190,9 @@ p3dec.addEventListener('click', function(event){
         totalscore++;
         total.innerText=totalscore;
     }
-})
+}
 
-p4dec.addEventListener('click', function(event){
+p4dec.onclick=function(event){
 
     if(totalscore==19){
 
@@ -179,11 +212,11 @@ p4dec.addEventListener('click', function(event){
         totalscore++;
         total.innerText=totalscore;
     }
-})
+}
 }
 
 {//rani logic
-p1rani.addEventListener('click', function(event){
+p1rani.onclick=function(event){
 
     if(p1score<9){
 
@@ -206,9 +239,9 @@ p1rani.addEventListener('click', function(event){
     }
 
     else event.stopPropagation();
-})
+}
 
-p2rani.addEventListener('click', function(event){
+p2rani.onclick=function(event){
 
     if(p2score<9){
 
@@ -231,9 +264,9 @@ p2rani.addEventListener('click', function(event){
     }
 
     else event.stopPropagation();
-})
+}
 
-p3rani.addEventListener('click', function(event){
+p3rani.onclick=function(event){
 
     if(p3score<9){
 
@@ -256,9 +289,9 @@ p3rani.addEventListener('click', function(event){
     }
 
     else event.stopPropagation();
-})
+}
 
-p4rani.addEventListener('click', function(event){
+p4rani.onclick=function(event){
 
     if(p4score<9){
 
@@ -281,11 +314,23 @@ p4rani.addEventListener('click', function(event){
     }
 
     else event.stopPropagation();
-})
+}
+}
+
+{//stat logic
+statsbtn.onclick=function(){
+    statwindow.style.visibility='visible';
+}    
+}
+
+{//closebtn logic
+closebtn.onclick=function(){
+    statwindow.style.visibility='hidden';
+}
 }
 
 {//reset logic
-reset.addEventListener('click', function(){
+reset.onclick=function(){
 
     p1score=0;
     p2score=0;
@@ -310,27 +355,65 @@ reset.addEventListener('click', function(){
     p4scoreDisplay.textContent = p4score;
 
     total.innerText=totalscore;
-})
+}
 }
 
 {//newbtn logic
-newbtn.addEventListener('click', function(){
-
+newbtn.onclick=function(){
     confirmwindow.style.visibility = 'visible';
-})
+}
+}
+
+{//click out logic
+window.onclick = function(event) {
+
+    if (event.target === confirmwindow) {
+        confirmwindow.style.visibility = 'hidden';
+    }
+
+    else if(event.target === statwindow) {
+        statwindow.style.visibility = 'hidden';
+    }
+}    
 }
 
 {//nobtn logic
-nobtn.addEventListener('click', function(){
+nobtn.onclick=function(){
 
     confirmwindow.style.visibility = 'hidden';
-})
+}
 }
 
 {//yesbtn logic
-yesbtn.addEventListener('click', function(){
+yesbtn.onclick=function(){
+
+    gamecounter++;
+
+    p1totalscore=p1totalscore+p1score;
+    p2totalscore=p2totalscore+p2score;
+    p3totalscore=p3totalscore+p3score;
+    p4totalscore=p4totalscore+p4score;
+
+    p1avgscore=p1totalscore/gamecounter;
+    p2avgscore=p2totalscore/gamecounter;
+    p3avgscore=p3totalscore/gamecounter;
+    p4avgscore=p4totalscore/gamecounter;
+
+    p1total.textContent=p1totalscore;
+    p2total.textContent=p2totalscore;
+    p3total.textContent=p3totalscore;
+    p4total.textContent=p4totalscore;
+
+    p1avg.textContent=p1avgscore;
+    p2avg.textContent=p2avgscore;
+    p3avg.textContent=p3avgscore;
+    p4avg.textContent=p4avgscore;
+
+    gamesplayed.textContent="Games played : "+gamecounter;
+
+    // gametable.
 
     reset.click();
     confirmwindow.style.visibility = 'hidden';
-})   
+}
 }
