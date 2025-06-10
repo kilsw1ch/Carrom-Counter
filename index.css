@@ -1,0 +1,104 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #F9E2B3;
+    font-size: 4rem;
+    color: #333;
+}
+
+#title{
+    padding-top: 20%;
+    text-align: center;
+    font-size: 7rem;
+}
+
+.radio {
+    /* margin: 10px 0; */
+    /* position: relative; */
+}
+/* Hide the default radio button */
+.radio input {
+    position: absolute;
+    opacity: 0;
+    /* cursor: pointer; */
+}
+/* Create a custom radio button */
+.radio label {
+    position: relative;
+    padding-left: 70px;
+    /* cursor: pointer; */
+}
+/* Custom radio button design */
+.radio label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    background-color: white;
+}
+/* Checked state */
+.radio input:checked + label::before {
+    background-color: #333;
+}
+/* Optional: Add a dot for checked state */
+.radio input:checked + label::after {
+    content: '';
+    position: absolute;
+    left: 7%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: white;
+    /* Adjust dot position and appearance here */
+}
+
+#names1v1{
+    
+
+
+    input{
+        /* outline: none; */
+        font-size: 4rem;
+        width: 50%;
+    }
+
+    #p1name{
+        background-color: #fdfd96;
+    }
+
+    #p2name{
+        background-color: #FFB3BA;
+    }
+
+    
+}
+
+#names2v2{
+
+    visibility: hidden;
+    /* display: none; */
+
+    input{
+        /* outline: none; */
+        font-size: 4rem;
+        width: 50%;
+    }
+
+    #p3name{
+        background-color: #B8E2B8;
+    }
+
+    #p4name{
+        background-color: #A7C6ED;
+    }
+}
