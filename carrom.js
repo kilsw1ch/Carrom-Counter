@@ -394,10 +394,10 @@ yesbtn.onclick=function(){
     p3totalscore=p3totalscore+p3score;
     p4totalscore=p4totalscore+p4score;
 
-    p1avgscore=p1totalscore/gamecounter;
-    p2avgscore=p2totalscore/gamecounter;
-    p3avgscore=p3totalscore/gamecounter;
-    p4avgscore=p4totalscore/gamecounter;
+    p1avgscore=(p1totalscore/gamecounter).toFixed(2);
+    p2avgscore=(p2totalscore/gamecounter).toFixed(2);
+    p3avgscore=(p3totalscore/gamecounter).toFixed(2);
+    p4avgscore=(p4totalscore/gamecounter).toFixed(2);
 
     p1total.textContent=p1totalscore;
     p2total.textContent=p2totalscore;

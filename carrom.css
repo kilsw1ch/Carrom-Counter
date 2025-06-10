@@ -9,45 +9,40 @@ body{
 
 .player1{
 
-    position:absolute;
     width: 50%;
     height: 46%;
     background-color: #fdfd96;
-    text-align: center;
 }
 
 .player2{
 
-    position:absolute;
     left:50%;
     width: 50%;
     height: 46%;
     background-color: #FFB3BA;
-    text-align: center;
 }
 
 .player3{
 
-    position:absolute;
     top:46%;
     width: 50%;
     height: 46%;
     background-color: #B8E2B8;
-    text-align: center;
 }
 
 .player4{
 
-    position:absolute;
     top:46%;
     left:50%;
     width: 50%;
     height: 46%;
     background-color: #A7C6ED;
-    text-align: center;
 }
 
 .player1, .player2, .player3, .player4{
+
+    position:absolute;
+    text-align: center;
 
     p{
         margin-top:10%;
@@ -73,10 +68,18 @@ body{
         background-color: #000;
 
         font-size: 5rem;
+        line-height: 0;
         color: #fff;
         text-align: center;
 
         padding: 10px;
+
+        span{
+            position: absolute;
+            font-size: 4rem;
+            bottom: 25px;
+            left: 29px;
+        }
     }
 
     .ranibtn{
