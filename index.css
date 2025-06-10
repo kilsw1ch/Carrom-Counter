@@ -20,10 +20,10 @@ body{
     position:absolute;
     display: flex;
     top: 30%;
-    left: 5%;
+    left: 14%;
 
     .radio {
-        margin-left:55px;
+        margin-left:40px;
     }
     
     .radio input {

@@ -1,10 +1,3 @@
-//player div
-const p1 = document.getElementById('player1')
-const p2 = document.getElementById('player2')
-const p3 = document.getElementById('player3')
-const p4 = document.getElementById('player4')
-
-
 //scoredisplay
 const p1scoreDisplay = document.getElementById('p1score');
 const p2scoreDisplay = document.getElementById('p2score');
@@ -17,37 +10,22 @@ let p2score = 0;
 let p3score = 0;
 let p4score = 0;
 
-//dec buttons
-const p1dec = document.getElementById('p1dec')
-const p2dec = document.getElementById('p2dec')
-const p3dec = document.getElementById('p3dec')
-const p4dec = document.getElementById('p4dec')
-
-//rani buttons
-const p1rani = document.getElementById('p1rani')
-const p2rani = document.getElementById('p2rani')
-const p3rani = document.getElementById('p3rani')
-const p4rani = document.getElementById('p4rani')
-
 //totalscore
 const total=document.getElementById('displayedtotal');
 let totalscore = 19;
 
 //bottombar
-const statsbtn=document.getElementById('statsbtn');
+const resetbtn=document.getElementById('resetbtn');
 const statwindow=document.getElementById('statwindow');
-const closebtn=document.getElementById('closebtn');
 
 const p1total=document.getElementById('p1total');
-const p1avg=document.getElementById('p1avg');
-
 const p2total=document.getElementById('p2total');
-const p2avg=document.getElementById('p2avg');
-
 const p3total=document.getElementById('p3total');
-const p3avg=document.getElementById('p3avg');
-
 const p4total=document.getElementById('p4total');
+
+const p1avg=document.getElementById('p1avg');
+const p2avg=document.getElementById('p2avg');
+const p3avg=document.getElementById('p3avg');
 const p4avg=document.getElementById('p4avg');
 
 let p1totalscore=0;
@@ -66,17 +44,10 @@ const gamesplayed=document.getElementById('gamesplayed');
 
 const gametable=document.getElementById('gametable');
 
-
-const reset=document.getElementById('resetbtn');
-
-const newbtn=document.getElementById('newbtn');
 const confirmwindow=document.getElementById('confirmwindow');
-const nobtn=document.getElementById('nobtn');
-const yesbtn=document.getElementById('yesbtn');
-
 
 {//inc logic
-p1.onclick=function() {
+document.getElementById('player1').onclick=function() {
 
     if(p1score!=10){
 
@@ -88,7 +59,7 @@ p1.onclick=function() {
     }
 };
 
-p2.onclick=function() {
+document.getElementById('player2').onclick=function() {
 
     if(p2score!=10){
 
@@ -100,7 +71,7 @@ p2.onclick=function() {
     }
 };
 
-p3.onclick=function() {
+document.getElementById('player3').onclick=function() {
 
     if(p3score!=10){
 
@@ -112,7 +83,7 @@ p3.onclick=function() {
     }
 };
 
-p4.onclick=function() {
+document.getElementById('player4').onclick=function() {
 
     if(p4score!=10){
 
@@ -126,7 +97,7 @@ p4.onclick=function() {
 }
 
 {//dec logic
-p1dec.onclick=function(event){
+document.getElementById('p1dec').onclick=function(event){
 
     if(totalscore==19){
 
@@ -148,7 +119,7 @@ p1dec.onclick=function(event){
     }
 }
 
-p2dec.onclick=function(event){
+document.getElementById('p2dec').onclick=function(event){
 
     if(totalscore==19){
 
@@ -170,7 +141,7 @@ p2dec.onclick=function(event){
     }
 }
 
-p3dec.onclick=function(event){
+document.getElementById('p3dec').onclick=function(event){
 
     if(totalscore==19){
 
@@ -192,7 +163,7 @@ p3dec.onclick=function(event){
     }
 }
 
-p4dec.onclick=function(event){
+document.getElementById('p4dec').onclick=function(event){
 
     if(totalscore==19){
 
@@ -214,6 +185,12 @@ p4dec.onclick=function(event){
     }
 }
 }
+
+//rani buttons
+const p1rani = document.getElementById('p1rani')
+const p2rani = document.getElementById('p2rani')
+const p3rani = document.getElementById('p3rani')
+const p4rani = document.getElementById('p4rani')
 
 {//rani logic
 p1rani.onclick=function(event){
@@ -318,19 +295,19 @@ p4rani.onclick=function(event){
 }
 
 {//stat logic
-statsbtn.onclick=function(){
+document.getElementById('statsbtn').onclick=function(){
     statwindow.style.visibility='visible';
-}    
+}
 }
 
 {//closebtn logic
-closebtn.onclick=function(){
+document.getElementById('closebtn').onclick=function(){
     statwindow.style.visibility='hidden';
 }
 }
 
 {//reset logic
-reset.onclick=function(){
+resetbtn.onclick=function(){
 
     p1score=0;
     p2score=0;
@@ -359,7 +336,7 @@ reset.onclick=function(){
 }
 
 {//newbtn logic
-newbtn.onclick=function(){
+document.getElementById('newbtn').onclick=function(){
     confirmwindow.style.visibility = 'visible';
 }
 }
@@ -378,14 +355,14 @@ window.onclick = function(event) {
 }
 
 {//nobtn logic
-nobtn.onclick=function(){
+document.getElementById('nobtn').onclick=function(){
 
     confirmwindow.style.visibility = 'hidden';
 }
 }
 
 {//yesbtn logic
-yesbtn.onclick=function(){
+document.getElementById('yesbtn').onclick=function(){
 
     gamecounter++;
 
@@ -413,7 +390,17 @@ yesbtn.onclick=function(){
 
     // gametable.
 
-    reset.click();
+    resetbtn.click();
     confirmwindow.style.visibility = 'hidden';
 }
 }
+
+const p1name = sessionStorage.getItem('p1name');
+const p2name = sessionStorage.getItem('p2name');
+const p3name = sessionStorage.getItem('p3name');
+const p4name = sessionStorage.getItem('p4name');
+
+document.getElementById('p1namep').textContent = p1name;
+document.getElementById('p2namep').textContent = p2name;
+document.getElementById('p3namep').textContent = p3name;
+document.getElementById('p4namep').textContent = p4name;
