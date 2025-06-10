@@ -15,90 +15,124 @@ body{
     font-size: 7rem;
 }
 
-.radio {
-    /* margin: 10px 0; */
-    /* position: relative; */
-}
-/* Hide the default radio button */
-.radio input {
-    position: absolute;
-    opacity: 0;
-    /* cursor: pointer; */
-}
-/* Create a custom radio button */
-.radio label {
-    position: relative;
-    padding-left: 70px;
-    /* cursor: pointer; */
-}
-/* Custom radio button design */
-.radio label::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    border: 2px solid #333;
-    border-radius: 50%;
-    background-color: white;
-}
-/* Checked state */
-.radio input:checked + label::before {
-    background-color: #333;
-}
-/* Optional: Add a dot for checked state */
-.radio input:checked + label::after {
-    content: '';
-    position: absolute;
-    left: 7%;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background-color: white;
-    /* Adjust dot position and appearance here */
-}
+.gamemode{
 
-#names1v1{
+    position:absolute;
+    display: flex;
+    top: 30%;
+    left: 5%;
+
+    .radio {
+        margin-left:55px;
+    }
     
+    .radio input {
+        position: absolute;
+        opacity: 0;
+        /* cursor: pointer; */
+    }
+    
+    .radio label {
+        position: relative;
+        padding-left: 70px;
+        /* cursor: pointer; */
+    }
+    
+    .radio label::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 50px;
+        height: 50px;
+        border: 2px solid #333;
+        border-radius: 50%;
+        background-color: white;
+    }
+    
+    .radio input:checked + label::before {
+        background-color: #333;
+    }
+    
+    .radio input:checked + label::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #333;
+        /* Adjust dot position and appearance here */
+    }
+}
 
+.names{
 
+    position: absolute;
+    top: 40%;
+    height: 30%;
+    width: 100%;
+    
     input{
-        /* outline: none; */
         font-size: 4rem;
         width: 50%;
     }
 
+    input:focus{
+        outline: none;
+        border-color: #66afe9;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
     #p1name{
+        position: absolute;
+        /* top: 0; */
+        left: 25%;
         background-color: #fdfd96;
     }
 
     #p2name{
-        background-color: #FFB3BA;
-    }
-
-    
-}
-
-#names2v2{
-
-    visibility: hidden;
-    /* display: none; */
-
-    input{
-        /* outline: none; */
-        font-size: 4rem;
-        width: 50%;
+        position: absolute;
+        top: 30%;
+        left: 25%;
+        background-color: #ffb3ba;
     }
 
     #p3name{
-        background-color: #B8E2B8;
+        visibility: hidden;
+        position: absolute;
+        top: 60%;
+        left: 25%;
+        background-color: #b8e2b8;
     }
 
     #p4name{
-        background-color: #A7C6ED;
+        visibility: hidden;
+        position: absolute;
+        top: 90%;
+        left: 25%;
+        background-color: #a7c6ed;
+    }
+}
+
+#start{
+
+    background-color: #333;
+    border-radius: 5%;
+    width: 30%;
+    height: 7%;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 60%;
+    left: 35%;
+
+    span{
+        position: absolute;
+        top: 20%;
+        left: 30%;
     }
 }

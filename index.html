@@ -3,6 +3,8 @@
 
 <head>
 
+    <meta name="viewport" content="user-scalable=no">
+
     <title>home | carrom counter</title>
     <link rel="stylesheet" href="index.css">
 
@@ -15,33 +17,31 @@
     
     <p id="title">carrom<br>counter</p>
 
-    <span>Game mode</span>
+    <div class="gamemode">
 
-    <div class="radio">
-        <input type="radio" name="gamemode" id="gamemode1" value="1">
-        <label for="gamemode1">1 vs 1</label>
-    </div>
+        <span>game mode</span>
 
-    <div class="radio">
-        <input type="radio" name="gamemode" id="gamemode2" value="2">
-        <label for="gamemode2">2 vs 2</label>
+        <div class="radio">
+            <input type="radio" name="gamemode" id="gamemode1" value="1">
+            <label for="gamemode1">1 vs 1</label>
+        </div>
+
+        <div class="radio">
+            <input type="radio" name="gamemode" id="gamemode2" value="2">
+            <label for="gamemode2">2 vs 2</label>
+        </div>
     </div>
 
     <div class="names">
 
-        <div id="names1v1">
-            <input type="text" name="" id="p1name" placeholder="Player 1">
-            <input type="text" name="" id="p2name" placeholder="Player 2">
-        </div>
-
-        <div id="names2v2">
-            <input type="text" name="" id="p3name" placeholder="Player 3">
-            <input type="text" name="" id="p4name" placeholder="Player 4">
-        </div>
+        <input type="text" id="p1name" placeholder="player 1">
+        <input type="text" id="p2name" placeholder="player 2">
+        <input type="text" id="p3name" placeholder="player 3">
+        <input type="text" id="p4name" placeholder="player 4">
     </div>
 
-    <div id="start" onclick="window.open('https://kilsw1ch.github.io/Carrom-Counter/carrom.html')">
-        <span>Start</span>
+    <div id="start">
+        <span>start</span>
     </div>
 </body>
 <script src="index.js"></script>
