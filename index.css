@@ -20,7 +20,7 @@ body{
     position:absolute;
     display: flex;
     top: 30%;
-    left: 14%;
+    left: 10%;
 
     .radio {
         margin-left:40px;
@@ -89,14 +89,13 @@ body{
 
     #p1name{
         position: absolute;
-        /* top: 0; */
         left: 25%;
         background-color: #fdfd96;
     }
 
     #p2name{
         position: absolute;
-        top: 30%;
+        top: 50%;
         left: 25%;
         background-color: #ffb3ba;
     }
@@ -127,7 +126,7 @@ body{
     text-align: center;
     color: #fff;
     position: absolute;
-    top: 60%;
+    top: 65%;
     left: 35%;
 
     span{

@@ -404,3 +404,8 @@ document.getElementById('p1namep').textContent = p1name;
 document.getElementById('p2namep').textContent = p2name;
 document.getElementById('p3namep').textContent = p3name;
 document.getElementById('p4namep').textContent = p4name;
+
+document.getElementById('p1namet').textContent = p1name;
+document.getElementById('p2namet').textContent = p2name;
+document.getElementById('p3namet').textContent = p3name;
+document.getElementById('p4namet').textContent = p4name;
