@@ -235,14 +235,14 @@ body{
         #summarytag{
             
             position: absolute;
-            top: 39%;
+            top: 45%;
             left: 5%;
         }
 
         #gametable{
 
             position: relative;
-            top: 45%;
+            top: 55%;
             left: 5%;
             width: 90%;
             border-collapse: collapse;
