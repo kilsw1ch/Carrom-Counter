@@ -36,16 +36,21 @@ document.getElementById('gamemode2').onclick=function(){
 
 startbtn.onclick=function(){
 
-    const p1name = document.getElementById('p1name').value;
-    const p2name = document.getElementById('p2name').value;
-    const p3name = document.getElementById('p3name').value;
-    const p4name = document.getElementById('p4name').value;
+    // if(p1namefield.value!="" && p2namefield.value!=""){
 
-    sessionStorage.setItem('p1name', p1name);
-    sessionStorage.setItem('p2name', p2name);
-    sessionStorage.setItem('p3name', p3name);
-    sessionStorage.setItem('p4name', p4name);
+    //     sessionStorage.setItem('p1name', p1namefield.value);
+    //     sessionStorage.setItem('p2name', p2namefield.value);
 
-    // window.location.href = 'https://kilsw1ch.github.io/Carrom-Counter/carrom.html';
-    window.location.href = 'carrom.html';
+    //     window.location.href = 'carrom.html';
+    // }
+
+    if(p1namefield.value!="" && p2namefield.value!="" && p3namefield.value!="" && p4namefield.value!=""){
+
+        sessionStorage.setItem('p1name', p1namefield.value);
+        sessionStorage.setItem('p2name', p2namefield.value);
+        sessionStorage.setItem('p3name', p3namefield.value);
+        sessionStorage.setItem('p4name', p4namefield.value);
+
+        window.location.href = 'carrom.html';
+    }
 }

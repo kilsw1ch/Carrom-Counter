@@ -16,7 +16,7 @@ body{
 
 .player2{
 
-    left:50%;
+    left: 50%;
     width: 50%;
     height: 46%;
     background-color: #FFB3BA;
@@ -48,7 +48,8 @@ body{
         margin-top:10%;
     }
 
-    span{
+    #p1score, #p2score, #p3score, #p4score{
+
         display: inline-block;
         margin-top:35%;
     }
@@ -56,8 +57,9 @@ body{
     .decbtn{
 
         position: absolute;
-        left:20%;
+        left:30%;
         top:70%;
+        left:20%;
 
         border: none;
         border-radius: 50%;
@@ -105,7 +107,7 @@ body{
 
         span{
             font-size: 4rem;
-            line-height: 0.5;
+            line-height: 1.5;
         }
     }
 }
@@ -196,13 +198,20 @@ body{
         width: 98%;
         height: 91%;
 
-        button{
+        #gamesplayed{
+
+            position: absolute;
+            top: 1%;
+            left: 25%;
+        }
+
+        #closebtn{
 
             background: none;
             border: none;
             position: absolute;
-            top: 2%;
-            right: 4%;
+            top: 0.5%;
+            right: 1%;
             color: #fff;
 
             span{
@@ -213,7 +222,7 @@ body{
         #stattable{
 
             position: absolute;
-            top: 10%;
+            top: 7%;
             left: 5%;
             width: 90%;
             border-collapse: collapse;
@@ -223,14 +232,21 @@ body{
             }
         }
 
+        #summarytag{
+            
+            position: absolute;
+            top: 39%;
+            left: 5%;
+        }
+
         #gametable{
 
-            /* visibility: hidden; */
             position: relative;
-            top: 55%;
+            top: 45%;
             left: 5%;
             width: 90%;
             border-collapse: collapse;
+            /* border: none; */
             
             td{
                 padding: 15px;
